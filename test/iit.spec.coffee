@@ -25,57 +25,60 @@ describe 'IitFilter', ->
 
   it 'should not filter when empty', ->
     expect(iitFilter.isInclusive()).to.equal false
-    expect(iitFilter.filter '/any/path.js').to.equal true
 
 
   it 'should filter only iit files', ->
+    iitFilter.updateFile '/regular/file.js', REGULAR_CONTENT
     iitFilter.updateFile '/some/file.js', IIT_CONTENT
 
     expect(iitFilter.isInclusive()).to.equal true
-    expect(iitFilter.filter '/other/path.js').to.equal false
+    expect(iitFilter.filter '/regular/file.js').to.equal false
     expect(iitFilter.filter '/some/file.js').to.equal true
 
 
   it 'should remove the filter when iit removed', ->
+    iitFilter.updateFile '/regular/file.js', REGULAR_CONTENT
     iitFilter.updateFile '/some/file.js', IIT_CONTENT
     expect(iitFilter.isInclusive()).to.equal true
+    expect(iitFilter.filter '/regular/file.js').to.equal false
 
     iitFilter.updateFile '/some/file.js', REGULAR_CONTENT
     expect(iitFilter.isInclusive()).to.equal false
-    expect(iitFilter.filter '/other/path.js').to.equal true
+    expect(iitFilter.filter '/regular/file.js').to.equal true
     expect(iitFilter.filter '/some/file.js').to.equal true
 
 
   it 'should filter only ddescribe files', ->
+    iitFilter.updateFile '/regular/file.js', REGULAR_CONTENT
     iitFilter.updateFile '/some/file.js', DDESCRIBE_CONTENT
 
     expect(iitFilter.isInclusive()).to.equal true
-    expect(iitFilter.filter '/other/path.js').to.equal false
+    expect(iitFilter.filter '/regular/file.js').to.equal false
     expect(iitFilter.filter '/some/file.js').to.equal true
 
 
   it 'should remove the filter when ddescribe removed', ->
+    iitFilter.updateFile '/regular/file.js', REGULAR_CONTENT
     iitFilter.updateFile '/some/file.js', DDESCRIBE_CONTENT
     expect(iitFilter.isInclusive()).to.equal true
 
     iitFilter.updateFile '/some/file.js', REGULAR_CONTENT
     expect(iitFilter.isInclusive()).to.equal false
-    expect(iitFilter.filter '/other/path.js').to.equal true
+    expect(iitFilter.filter '/regular/file.js').to.equal true
     expect(iitFilter.filter '/some/file.js').to.equal true
 
 
   it 'should ignore ddescribe when iit present', ->
     iitFilter.updateFile '/some/dd.js', DDESCRIBE_CONTENT
-
     iitFilter.updateFile '/some/ii.js', IIT_CONTENT
 
     expect(iitFilter.isInclusive()).to.equal true
-    expect(iitFilter.filter '/some/other.js').to.equal false
     expect(iitFilter.filter '/some/dd.js').to.equal false
     expect(iitFilter.filter '/some/ii.js').to.equal true
 
 
   it 'should filter only ddescribe when the only iit removed', ->
+    iitFilter.updateFile '/some/other.js', REGULAR_CONTENT
     iitFilter.updateFile '/some/dd.js', DDESCRIBE_CONTENT
     iitFilter.updateFile '/some/ii.js', IIT_CONTENT
     iitFilter.updateFile '/some/ii.js', REGULAR_CONTENT
