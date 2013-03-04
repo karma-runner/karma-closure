@@ -26,6 +26,10 @@ describe 'IitFilter', ->
   it 'should not filter when empty', ->
     expect(iitFilter.isInclusive()).to.equal false
 
+  it 'should never filter unknown files', ->
+    iitFilter.updateFile '/some/ii.js', IIT_CONTENT
+    expect(iitFilter.filter '/other/file.js').to.equal true
+
 
   it 'should filter only iit files', ->
     iitFilter.updateFile '/regular/file.js', REGULAR_CONTENT
