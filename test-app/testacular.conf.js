@@ -14,13 +14,6 @@ files = [
   {pattern: 'lib/goog/deps.js', included: false, served: false, preprocessors: ['closure-deps']}
 ];
 
-// TODO(vojta): allow preprocessors defined in files
-preprocessors = {
-  '**/test/*.js': 'closure',
-  '**/js/*.js': 'closure',
-  '**/lib/goog/deps.js': 'closure-deps'
-};
-
 plugins = [
   'closure-deps-resolver',
   'testacular-jasmine',
