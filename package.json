@@ -1,7 +1,7 @@
 {
   "name": "testacular-closure",
   "version": "0.0.1",
-  "description": "A Testacular plugin. Resolve Google Closure dependencies on the fly.",
+  "description": "A Karma plugin. Resolve Google Closure dependencies on the fly.",
   "main": "lib/plugin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,7 @@
     "chai": "~1.5"
   },
   "peerDependencies": {
-    "testacular": "0.7.0"
+    "karma": "~0.9"
   },
   "license": "MIT"
 }
