@@ -39,6 +39,31 @@ describe 'goog.parseProvideRequire', ->
     expect(parsed.requires).to.deep.equal ['a.c']
 
 
+  it 'should ignore comments', ->
+    parsed = parseProvideRequire '''
+    // goog.provide('a')
+    goog.provide('b');
+    /* goog.provide('c'); */
+    // goog.require('d')
+    goog.require('e');
+    /* goog.require('f'); */
+    '''
+
+    expect(parsed.provides).to.deep.equal ['b']
+    expect(parsed.requires).to.deep.equal ['e']
+
+
+  it 'should parse indented goog', ->
+    parsed = parseProvideRequire '''
+    // something
+      goog.provide('a');
+      goog.require('b');
+    '''
+
+    expect(parsed.provides).to.deep.equal ['a']
+    expect(parsed.requires).to.deep.equal ['b']
+
+
 describe 'goog.parseDepsJs', ->
   parseDepsJs = goog.parseDepsJs
 
