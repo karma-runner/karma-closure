@@ -1,5 +1,5 @@
 {
-  "name": "testacular-closure",
+  "name": "karma-closure",
   "version": "0.0.1",
   "description": "A Karma plugin. Resolve Google Closure dependencies on the fly.",
   "main": "lib/plugin.js",
@@ -8,7 +8,7 @@
   },
   "repository": {},
   "keywords": [
-    "testacular-plugin",
+    "karma-plugin",
     "closure"
   ],
   "author": "Vojta Jina <vojta.jina@gmail.com>",
