@@ -1,24 +1,6 @@
 module.exports = (grunt) ->
 
-  # Project configuration.
   grunt.initConfig
-    pkgFile: 'package.json'
-
-    files:
-      server: ['lib/**/*.js']
-      client: ['static/karma.src.js']
-      grunt: ['grunt.js', 'tasks/**/*.js']
-      scripts: ['scripts/*.js']
-
-    build:
-      client: '<%= files.client %>'
-
-    test:
-      unit: 'simplemocha:unit'
-      tasks: 'simplemocha:tasks'
-      client: 'test/client/karma.conf.js'
-      e2e: ['test/e2e/*/karma.conf.js', 'test/e2e/*/karma.conf.coffee']
-
 
     simplemocha:
       options:
@@ -26,7 +8,6 @@ module.exports = (grunt) ->
         reporter: 'dot'
       unittests:
         src: [
-          # 'test/unit/mocha-globals.coffee'
           'test/**/*.coffee'
         ]
 
