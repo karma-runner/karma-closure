@@ -84,6 +84,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'test', ['simplemocha:unittests']
   grunt.registerTask 'default', ['test', 'jshint', 'coffeelint']
+  grunt.registerTask 'travis', ['test', 'jshint', 'coffeelint']
   grunt.registerTask 'release', 'Build, bump and publish to NPM.', (type) ->
     grunt.task.run [
       "bump:#{type||'patch'}"
