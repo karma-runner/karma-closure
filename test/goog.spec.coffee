@@ -84,9 +84,9 @@ describe 'goog.parseDepsJs', ->
     }
 
     expect(parsed.provideMap).to.deep.equal {
-        'html.HtmlParser': '/html/htmlparser.js'
-        'html.EFlags': '/html/htmlparser.js'
-        'dom.query': '/dom/query.js'
+      'html.HtmlParser': '/html/htmlparser.js'
+      'html.EFlags': '/html/htmlparser.js'
+      'dom.query': '/dom/query.js'
     }
 
 

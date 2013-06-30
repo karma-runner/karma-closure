@@ -39,7 +39,6 @@ module.exports = (grunt) ->
         options:
           # node
           node: true,
-          es5: true,
           strict: false
 
       options:
