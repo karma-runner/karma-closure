@@ -51,6 +51,10 @@ module.exports = (grunt) ->
         max_line_length:
           value: 100
 
+    'npm-contributors':
+      options:
+        commitMessage: 'chore: update contributors'
+
     bump:
       options:
         commitMessage: 'chore: release v%VERSION%'
@@ -67,6 +71,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'travis', ['test', 'jshint', 'coffeelint']
   grunt.registerTask 'release', 'Build, bump and publish to NPM.', (type) ->
     grunt.task.run [
+      'npm-contributors'
       "bump:#{type||'patch'}"
       'npm-publish'
     ]
