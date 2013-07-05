@@ -65,6 +65,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-bump'
   grunt.loadNpmTasks 'grunt-npm'
+  grunt.loadNpmTasks 'grunt-auto-release'
 
   grunt.registerTask 'test', ['simplemocha:unittests']
   grunt.registerTask 'default', ['test', 'jshint', 'coffeelint']
