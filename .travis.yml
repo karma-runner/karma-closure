@@ -10,4 +10,4 @@ before_script:
 
 script:
   - grunt travis
-  - karma start test-app/karma.conf.js --browsers Firefox --single-run
+  - ./node_modules/karma/bin/karma start test-app/karma.conf.js --browsers Firefox --single-run --reporters dots
