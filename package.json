@@ -32,5 +32,9 @@
   "peerDependencies": {
     "karma": "~0.9"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "contributors": [
+    "Rob Barreca <rob.barreca@inmobi.com>",
+    "Aaron Boushley <boushley@gmail.com>"
+  ]
 }
