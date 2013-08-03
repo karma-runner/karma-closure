@@ -8,8 +8,8 @@ The easiest way is to keep `karma-closure` as a devDependency in your `package.j
 ```json
 {
   "devDependencies": {
-    "karma": "~0.9",
-    "karma-closure": "~0.0.1"
+    "karma": "~0.10",
+    "karma-closure": "~0.1"
   }
 }
 ```
