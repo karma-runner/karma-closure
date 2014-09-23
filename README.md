@@ -46,7 +46,7 @@ module.exports = function(config) {
 };
 ```
 
-For an example project, check out [./test-app/](/tree/master/test-app)
+For an example project, check out [./test-app/](test-app)
 
 
 ## IIT preprocessor
