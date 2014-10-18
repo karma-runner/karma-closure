@@ -9,7 +9,8 @@ module.exports = function(config) {
       // these are only watched and served
       {pattern: 'js/*.js', included: false},
       // external deps
-      {pattern: 'lib/goog/deps.js', included: false, served: false}
+      {pattern: 'lib/goog/deps.js', included: false, served: false},
+      {pattern: 'lib/goog/**/*.js', included: false}
     ],
 
     preprocessors: {
@@ -21,4 +22,8 @@ module.exports = function(config) {
     browsers: ['Chrome'],
     autoWatch: true
   });
+
+  // Load the plugin from the workspace.
+  // You don't need this if you just install karma-closure through NPM.
+  config.plugins.push(require('../lib/plugin'));
 };
