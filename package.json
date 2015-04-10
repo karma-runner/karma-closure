@@ -1,14 +1,14 @@
 {
-  "name": "karma-closure",
-  "version": "0.1.0",
-  "description": "A Karma plugin. Resolve Google Closure dependencies on the fly.",
+  "name": "karma-closure-next",
+  "version": "0.1.1",
+  "description": "Fork of the karma plugin with fixes to make ir work in 0.12",
   "main": "lib/plugin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/karma-runner/karma-closure.git"
+    "url": "git://github.com/kileras/karma-closure.git"
   },
   "keywords": [
     "karma-plugin",
