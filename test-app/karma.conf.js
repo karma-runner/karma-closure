@@ -20,7 +20,7 @@ module.exports = function(config) {
     },
 
     browsers: ['Chrome'],
-    autoWatch: true
+    autoWatch: false
   });
 
   // Load the plugin from the workspace.

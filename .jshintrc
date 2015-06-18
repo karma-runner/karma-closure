@@ -1,0 +1,29 @@
+{
+    "globalstrict": true,
+    "latedef": true,
+    "asi": false,
+    "boss": false,
+    "eqeqeq": true,
+    "eqnull": true,
+    "evil": false,
+    "multistr": false,
+    "freeze": true,
+    "newcap": true,
+    "indent": 4,
+    "curly": true,
+    "trailing": true,
+    "immed": true,
+    "nonbsp": true,
+    "bitwise": true,
+    "noarg": true,
+    "noempty": true,
+    "undef": true,
+    "unused": true,
+    "strict": false,
+    "sub": true,
+    "maxparams": 5,
+    "predef": [
+        "require",
+        "module"
+    ]
+}
