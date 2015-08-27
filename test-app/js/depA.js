@@ -1,6 +1,6 @@
-goog.provide('a');
+goog.provide( 'a' );
 
-goog.require('goog.string');
+goog.require( 'goog.string' );
 
 goog.require('b');
 goog.require('c');
