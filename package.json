@@ -34,7 +34,9 @@
   },
   "license": "MIT",
   "contributors": [
+    "Adam S. Kirschner <accounts@adamskirschner.com>",
     "Rob Barreca <rob.barreca@inmobi.com>",
-    "Aaron Boushley <boushley@gmail.com>"
+    "Aaron Boushley <boushley@gmail.com>",
+    "Mark Trostler <mark@zzo.com>"
   ]
 }
