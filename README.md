@@ -41,7 +41,18 @@ module.exports = function(config) {
       'js/*.js': ['closure'],
       // external deps
       'lib/goog/deps.js': ['closure-deps']
-    }
+    },
+
+    //To configure this plug-in add to karma config reporter section
+    reporters : [ 'closure-sonar' ],
+    // Enable this section to customize sonar reporter.
+    // sonarReporter : {
+    // // Output directory (defaults to '.').
+    // outputDir: '.',
+    // // File name (defaults to 'sonar.xml').
+    // outputFile: 'sonar.xml'
+},
+
   });
 };
 ```
@@ -53,6 +64,21 @@ For an example project, check out [./test-app/](/tree/master/test-app)
 When using `iit` or `ddescribe`, Jasmine only executes these tests (resp. the patched version that comes with Karma). But still, all the tests (even those that are not actually executed) are shipped to the browser, parsed and the definition of the tests is executed. On a huge project, this can easily take seconds.
 
 The `iit` preprocessor looks for test files that contain `iit` and only ships these tests (and their dependencies), which can significantly speed up running the tests during the development !
+
+
+## Sonar Reporter
+When using this reporter, it will generate report compatible with sonar Generic
+[Test Coverage Plug-in: http://docs.sonarqube.org/display/PLUG/Generic+Test+Coverage]
+```
+    //To configure this plug-in add to karma config reporter section
+    reporters : [ 'closure-sonar' ],
+    // Enable this section to customize sonar reporter.
+    // sonarReporter : {
+    // // Output directory (defaults to '.').
+    // outputDir: '.',
+    // // File name (defaults to 'sonar.xml').
+    // outputFile: 'sonar.xml'
+```
 
 
 ----

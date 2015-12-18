@@ -1,6 +1,6 @@
 {
   "name": "karma-closure",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "A Karma plugin. Resolve Google Closure dependencies on the fly.",
   "main": "lib/plugin.js",
   "scripts": {
@@ -15,7 +15,9 @@
     "closure"
   ],
   "author": "Vojta Jina <vojta.jina@gmail.com>",
-  "dependencies": {},
+  "dependencies": {
+    "xmlbuilder": "^4.1.0"
+  },
   "devDependencies": {
     "mocha": "~1.8",
     "chai": "~1.5",
@@ -37,6 +39,7 @@
     "Adam S. Kirschner <accounts@adamskirschner.com>",
     "Rob Barreca <rob.barreca@inmobi.com>",
     "Aaron Boushley <boushley@gmail.com>",
-    "Mark Trostler <mark@zzo.com>"
+    "Mark Trostler <mark@zzo.com>",
+    "Sam Elkhateeb <same@nanosn.com>"
   ]
 }
